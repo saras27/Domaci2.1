@@ -28,6 +28,9 @@ public class Employee implements Serializable {
             inverseJoinColumns = { @JoinColumn(name = "project_id", referencedColumnName = "id") })
     private Set<Project> projects = new HashSet<>();
 
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    private Address address;
+
     public Employee() {
     }
 

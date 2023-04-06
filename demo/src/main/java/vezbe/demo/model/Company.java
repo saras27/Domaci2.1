@@ -22,13 +22,15 @@ public class Company implements Serializable {
     @JsonIgnore
     private Set<Department> departments = new HashSet<>();
 
-    public Company(String name, String address) {
+   public Company(String name, String address) {
         this.name = name;
         this.address = address;
     }
 
     public Company() {
     }
+
+
 
     public void setId(Long id) {
         this.id = id;
@@ -46,13 +48,13 @@ public class Company implements Serializable {
         this.name = name;
     }
 
-    public String getAddress() {
+  /*  public String getAddress() {
         return address;
     }
 
     public void setAddress(String address) {
         this.address = address;
-    }
+    }*/
 
     public Set<Department> getDepartments() {
         return departments;
